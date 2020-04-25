@@ -1,12 +1,12 @@
 body {
 	font-family: 'Oswald', sans-serif;
-	background-color: white;
+	background-color: #FE5F55;
 	font-size: 100%;
   margin: 0;
 }
 
 h1 {
-	color: black;
+  color: black;
   background: url(images/blue-sky-blur-clear-sky-color-281260.jpg);
   background-position: bottom;
   background-size: cover;
@@ -17,13 +17,15 @@ h1 {
 	padding-top: 1em;
 	padding-bottom: 1em;
 	text-shadow: 2px 2px white;
-	border-bottom: solid 5px black;
+  border-bottom: solid 5px black;
+  animation: fadein 2s;
 }
 
 h2 {
 	font-weight: bold;
 	font-size: 240%;
   color: #000;
+  animation: fadein 2s;
 }
 
 h3 {
@@ -36,6 +38,7 @@ ul {
 
 a {
   text-decoration: none;
+  transition: 0.5s;
 }
 
 a:hover {
@@ -59,7 +62,9 @@ select {
 	margin-left: 0%;
 	border: solid 3px black;
   padding-left: 3em;
-  background-color: #DCE1E9;
+  background-color: #B8D8D8;
+  border-radius: 1em 0em 1em 0em;
+  animation: fadein 2s;
 }
 
 #sidebar {
@@ -69,20 +74,26 @@ select {
 	margin-left: 0%;
 	border: solid 3px black;
   padding-left: 3em;
-  background-color: #DCE1E9;
+  background-color: #B8D8D8;
+  border-radius: 0em 1em 0em 1em;
+  animation: fadein 2s;
 }
 
 #team {
   border: solid 3px black;
   box-shadow: 0px 0px 5px 2px black;
-  background-color: #B6CEC7;
+  background-color: #7A9E9F;
   padding-bottom: 1em;
+  border-radius: 1em;
 }
 
 table {
-	background-color: #DCE1E9;
-	border: solid 2px black;
-  box-shadow: 0px 0px 5px 2px black;
+  border-radius: 1em;
+  background-color: #DCE1E9;
+  border-collapse: collapse;
+  border-style: hidden;
+  box-shadow: 0px 0px 5px 4px black;
+  animation: fadein 2s;
 }
 
 td {
@@ -90,6 +101,7 @@ td {
   padding: 10px;
 }
 
+/* Images */
 img {
   box-shadow: 0px 0px 5px 2px black;
   border: solid 3px black;
@@ -102,4 +114,30 @@ img {
   width: 2em;
   border: none;
   box-shadow: none;
+}
+
+#search-icon {
+  position: absolute;
+  right: 1em;
+  vertical-align: middle;
+  width: 2em;
+  border: none;
+  box-shadow: none;
+  animation: fadein 1s;
+}
+
+#deal-icon {
+  position: absolute;
+  left: 1em;
+  vertical-align: middle;
+  width: 2em;
+  border: none;
+  box-shadow: none;
+  animation: fadein 1s;
+}
+
+/* Keyframes */
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
